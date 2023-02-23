@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --font_1: 'Montserrat';
+    --font_2: 'Fraunces';
+    --cor1: hsl(32, 37%, 92%);
+    --cor2: hsl(158, 36%, 37%);
+    --cor3: hsl(212, 21%, 14%);
+    --cor4: hsl(228, 12%, 48%);
+    --cor5: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor1);
+    font-family: var(--font_1);
+}
+section {
+    width: 90%;
+    background-color: var(--cor5);
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+img {
+    width: 100%;
+}
+#info {
+    line-height: 1.5em;
+    padding: 20px;
+}
+h1 {
+    font-family: var(--font_2);
+    font-size: 2em;
+    line-height: 1em;
+    margin: 10px 0px;
+}
+h2 {
+    color: var(--cor4);
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+p {
+    color: var(--cor4);
+}
+    #info>#preco {
+        color: var(--cor2);
+        font-family: var(--font_2);
+        font-size: 1.7em;
+        font-weight: 900;
+        margin: 15px 0px;
+    }
+    span {
+        position: absolute;
+        color: var(--cor4);
+        font-family: var(--font_1);
+        font-size: .5em;
+        font-weight: 500;
+        text-decoration: line-through;
+        margin-left: 20px;
+    }
+button {
+    width: 100%;
+    display: block;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-weight: 600;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+    button::before{
+        content: url('../images/icon-cart.svg')'\00A0\00A0';
+    }
+    button:hover {
+        background-color: hsl(158, 36%, 25%);
+    }
+
+@media screen and (min-width: 575px) {
+    body {
+        display: block;
+    }
+    section {
+        display: block;
+        max-width: 570px;
+        margin: 15vh auto;
+    }
+    img {
+        
+        float: left;
+        width: 50%;
+        min-height: 425px;
+        padding-bottom: 0px;
+    }
+    #info {
+        float: right;
+        width: 50%;
+        padding-bottom: 0px;
+    }
+    button {
+        margin-bottom: 0px;
+    }
+}
